@@ -13,7 +13,7 @@ const Service = ({ photoservice }) => {
                     <Card.Text>
                         Fee: {fee}
                     </Card.Text>
-                    <Button variant="primary">Go somewhere</Button>
+                    <Button variant="dark">Proceed</Button>
                 </Card.Body>
             </Card>
         </div>
