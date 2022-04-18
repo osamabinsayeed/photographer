@@ -5,7 +5,7 @@ import photo from './photographer.jpg'
 const Hire = () => {
     // const photo = 
     return (
-        <div className='container'>
+        <div className='container mb-5'>
             <Card className="bg-dark text-white">
                 <Card.Img src={photo} />
                 <Card.ImgOverlay>

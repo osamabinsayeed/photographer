@@ -3,18 +3,21 @@
         "id": 1,
         "service": "Wedding Photography",
         "fee": "500$ / hour",
-        "img": "photos/bride-groom-pose-large-circle-lilac-garden.jpg"
+        "img": "photos/bride-groom-pose-large-circle-lilac-garden.jpg",
+        "description": "professonal photography"
     },
     {
         "id": 2,
         "service": "Fashion Photography",
         "fee": "500$ / hour",
-        "img": "photos/professional-young-photographer-taking-photos-indian-model-studio-with-leight.jpg"
+        "img": "photos/professional-young-photographer-taking-photos-indian-model-studio-with-leight.jpg",
+        "description": "professonal photography"
     },
     {
         "id": 3,
         "service": "Sports Photography",
         "fee": "500$ / hour",
-        "img": "photos/sports.jpg"
+        "img": "photos/sports.jpg",
+        "description": "professonal photography"
     }
 ]

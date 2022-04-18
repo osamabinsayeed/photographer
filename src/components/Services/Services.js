@@ -14,7 +14,7 @@ const Services = () => {
             <div className='container'>
                 <h1 className='text-center m-5'>My Services</h1>
 
-                <div className='services row row-cols-lg-3 row-cols-md-2 row-cols-sm-1 ms-0'>
+                <div className='services row row-cols-lg-3 row-cols-1 row-cols-md-2 row-cols-sm-1'>
                     {
                         services?.map(photoservice =>
                             <Service
