@@ -5,8 +5,8 @@ const Service = ({ photoservice }) => {
 
     const { service, img, fee } = photoservice;
     return (
-        <div>
-            <Card style={{ width: '18rem' }}>
+        <div className='col mb-5 ms-4'>
+            <Card style={{ width: '18rem' }} className=''>
                 <Card.Img variant="top" src={img} />
                 <Card.Body>
                     <Card.Title>{service}</Card.Title>

@@ -11,10 +11,10 @@ const Services = () => {
     }, [])
     return (
         <div className='service-sec'>
-            <div>
+            <div className='container'>
                 <h1 className='text-center m-5'>My Services</h1>
 
-                <div className='services'>
+                <div className='services row row-cols-lg-3 row-cols-md-2 row-cols-sm-1 ms-0'>
                     {
                         services?.map(photoservice =>
                             <Service
