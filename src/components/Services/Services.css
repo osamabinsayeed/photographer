@@ -1,0 +1,12 @@
+.service-sec {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.services {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 50px;
+
+}

@@ -1,0 +1,20 @@
+[
+    {
+        "id": 1,
+        "service": "Wedding Photography",
+        "fee": "500$ / hour",
+        "img": "photos/bride-groom-pose-large-circle-lilac-garden.jpg"
+    },
+    {
+        "id": 2,
+        "service": "Fashion Photography",
+        "fee": "500$ / hour",
+        "img": "photos/professional-young-photographer-taking-photos-indian-model-studio-with-leight.jpg"
+    },
+    {
+        "id": 3,
+        "service": "Sports Photography",
+        "fee": "500$ / hour",
+        "img": "photos/sports.jpg"
+    }
+]
