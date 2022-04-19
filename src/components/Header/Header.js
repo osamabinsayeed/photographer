@@ -23,6 +23,14 @@ const Header = () => {
                                 <NavDropdown.Item href="#action/3.4">Separated link</NavDropdown.Item>
                             </NavDropdown>
                         </Nav>
+                        <Nav>
+                            <Nav.Link as={Link} to="/register">
+                                Register
+                            </Nav.Link>
+                            <Nav.Link as={Link} to="/login">
+                                Login
+                            </Nav.Link>
+                        </Nav>
 
                     </Navbar.Collapse>
                 </Container>

@@ -1,5 +1,6 @@
 import React from 'react';
 import { Button, Card, Col, Row } from 'react-bootstrap';
+import { Link } from 'react-router-dom';
 
 const Service = ({ photoservice }) => {
 
@@ -14,7 +15,10 @@ const Service = ({ photoservice }) => {
                         Fee: {fee} <br />
                         Description: {description}
                     </Card.Text>
-                    <Button variant="dark">Proceed</Button>
+                    <Link to="/checkout">
+                        <Button variant="dark">Proceed</Button>
+                    </Link>
+
                 </Card.Body>
             </Card>
         </div>
