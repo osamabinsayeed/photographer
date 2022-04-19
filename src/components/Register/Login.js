@@ -5,6 +5,7 @@ import { auth } from '../../firebase.init';
 import { ToastContainer, toast } from 'react-toastify';
 
 import 'react-toastify/dist/ReactToastify.css';
+import GoogleLogin from './GoogleLogin/GoogleLogin';
 
 const Login = () => {
     const [email, setEmail] = useState('');
@@ -43,7 +44,9 @@ const Login = () => {
                 </Button>
 
                 <ToastContainer></ToastContainer>
+                <GoogleLogin></GoogleLogin>
             </Form>
+
         </div>
     );
 };
