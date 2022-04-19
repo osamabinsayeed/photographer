@@ -36,7 +36,8 @@ const Header = () => {
                             </Nav.Link>
                             {
                                 user ?
-                                    <Nav.Link onClick={() => handleSignOut()}>
+                                    <Nav.Link
+                                        onClick={() => handleSignOut()}>
                                         Logout
                                     </Nav.Link>
                                     :

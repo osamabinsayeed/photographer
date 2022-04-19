@@ -6,15 +6,15 @@ import { ToastContainer, toast } from 'react-toastify';
 
 import 'react-toastify/dist/ReactToastify.css';
 import GoogleLogin from './GoogleLogin/GoogleLogin';
+import { Link } from 'react-router-dom';
+import './Login.css'
 
 const Login = () => {
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
     const [
         signInWithEmailAndPassword,
-        user,
-        loading,
-        error,
+        error
     ] = useSignInWithEmailAndPassword(auth);
     const customId = "custom-id-yes";
     if (error) {
@@ -45,6 +45,10 @@ const Login = () => {
 
                 <ToastContainer></ToastContainer>
                 <GoogleLogin></GoogleLogin>
+
+                {<Link to='/register' className='reg-now'>
+                    <p className='text-warning'>Didn't register yet? register now! </p>
+                </Link>}
             </Form>
 
         </div>

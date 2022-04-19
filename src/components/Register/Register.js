@@ -5,7 +5,7 @@ import { auth } from '../../firebase.init';
 import { ToastContainer, toast } from 'react-toastify';
 
 import 'react-toastify/dist/ReactToastify.css';
-import { useLocation, useNavigate } from 'react-router-dom';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 
 const Register = () => {
     const [email, setEmail] = useState('');
@@ -58,6 +58,9 @@ const Register = () => {
                     Submit
                 </Button>
                 {/* {error && <p>{error?.message}</p>} */}
+                {<Link to='/login' className='reg-now'>
+                    <p className='text-warning'>Already have an account? Login now!</p>
+                </Link>}
 
             </Form>
             <ToastContainer></ToastContainer>
