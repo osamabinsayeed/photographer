@@ -31,6 +31,9 @@ const Header = () => {
                             </NavDropdown>
                         </Nav>
                         <Nav>
+                            <p>
+                                {user?.email}
+                            </p>
                             <Nav.Link as={Link} to="/register">
                                 Register
                             </Nav.Link>

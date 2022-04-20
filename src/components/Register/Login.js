@@ -6,21 +6,33 @@ import { ToastContainer, toast } from 'react-toastify';
 
 import 'react-toastify/dist/ReactToastify.css';
 import GoogleLogin from './GoogleLogin/GoogleLogin';
-import { Link } from 'react-router-dom';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 import './Login.css'
 
 const Login = () => {
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
+    const location = useLocation();
+    const navigate = useNavigate();
+    let from = location.state?.from?.pathname || "/";
+
     const [
         signInWithEmailAndPassword,
-        error
+        error,
+        user
     ] = useSignInWithEmailAndPassword(auth);
     const customId = "custom-id-yes";
+
     if (error) {
         toast(error?.message, {
             toastId: customId
         })
+
+    }
+    if (user) {
+
+        navigate(from, { replace: true });
+
     }
     return (
         <div className='d-flex justify-content-center mt-5'>
@@ -39,7 +51,11 @@ const Login = () => {
                     <Form.Control onBlur={(e) => setPassword(e.target.value)} type="password" placeholder="Password" required />
                 </Form.Group>
 
-                <Button onClick={() => signInWithEmailAndPassword(email, password)} variant="dark" type="submit">
+                <Button onClick={(e) => {
+                    e.preventDefault();
+                    signInWithEmailAndPassword(email, password)
+                }
+                } variant="dark" type="submit">
                     Submit
                 </Button>
 
