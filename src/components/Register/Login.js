@@ -1,6 +1,6 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Button, Form } from 'react-bootstrap';
-import { useSignInWithEmailAndPassword } from 'react-firebase-hooks/auth';
+import { useAuthState, useSignInWithEmailAndPassword } from 'react-firebase-hooks/auth';
 import { auth } from '../../firebase.init';
 import { ToastContainer, toast } from 'react-toastify';
 
@@ -14,7 +14,10 @@ const Login = () => {
     const [password, setPassword] = useState('');
     const location = useLocation();
     const navigate = useNavigate();
+    const [user2] = useAuthState(auth);
     let from = location.state?.from?.pathname || "/";
+    // console.log(from);
+    // console.log("hello");
 
     const [
         signInWithEmailAndPassword,
@@ -29,14 +32,26 @@ const Login = () => {
         })
 
     }
-    if (user) {
-
-        navigate(from, { replace: true });
+    const handleFormSubmit = (e) => {
+        e.preventDefault();
+    }
+    const handleLoginWithEmail = () => {
+        signInWithEmailAndPassword(email, password);
 
     }
+    if (user2) {
+        navigate(from, { replace: true });
+    }
+    // if (user) {
+    //     console.log(from);
+
+
+    // }
+
+
     return (
         <div className='d-flex justify-content-center mt-5'>
-            <Form className='w-50'>
+            <Form onSubmit={handleFormSubmit} className='w-50'>
                 <h1 className='text-center'>Login</h1>
                 <Form.Group className="mb-3" controlId="formBasicEmail">
                     <Form.Label>Email address</Form.Label>
@@ -51,11 +66,7 @@ const Login = () => {
                     <Form.Control onBlur={(e) => setPassword(e.target.value)} type="password" placeholder="Password" required />
                 </Form.Group>
 
-                <Button onClick={(e) => {
-                    e.preventDefault();
-                    signInWithEmailAndPassword(email, password)
-                }
-                } variant="dark" type="submit">
+                <Button onClick={handleLoginWithEmail} variant="dark" type="submit">
                     Submit
                 </Button>
 
